@@ -1,0 +1,314 @@
+* {  margin: 0;
+      font-family: Raleway;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    img {
+      cursor: pointer;
+      border-image:white;
+      border-width: 1px;
+      border-style:solid;
+    }
+    
+    
+
+    /* Título de la página */
+    .titulo {
+      display: flex;
+      justify-content: center;
+      background: black;
+      color: #066DCC;
+      font-weight: bold;
+      padding: 33px;
+      font-size: 60px
+    }
+
+
+
+    /* Logo INAOE */
+    .logoimg {
+      display: flex;
+      height: 120px;
+      align-items: center;
+      margin: 15px;
+    }
+
+
+
+    /* Menú principal */
+    .container1 {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+
+    #header {
+      padding: 0px 0px 30px 0px;
+      margin: auto;
+      height: 16px;
+      width: 100%;
+      font-family: Raleway;
+      font-size: 18px;
+      position: sticky;
+      top: 0px;
+      background: #02284A;
+      z-index: 3;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    ul.nav,
+    .nav li {
+      list-style: none;
+    }
+
+    .nav li a {
+      background-color: #02284A;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .nav li a:hover {
+      background-color: #0099FF;
+      transition: 0.5s;
+      transform: scale(1.2);
+    }
+
+    .nav>li {
+      float: left;
+    }
+
+    .nav li ul {
+      display: none;
+      position: absolute;
+      min-width: 140px;
+      min-height: 80;
+      margin: 5px 0 0 0;
+    }
+
+    .nav li ul li a {
+      background-color: #00080f;
+      font-size: 16px;
+    }
+
+    .nav li:hover>ul {
+      display: block;
+    }
+
+
+
+
+
+    .container2 {
+      display: flex;
+      flex-flow: row;
+    }
+
+
+
+    /* Menú de la página */
+    .indice {
+      background: #54ABFA;
+      margin: 50px 10px 0 10px;
+      width: 35%;
+      height: 100%;
+      padding: 20px 60px 20px 20px;
+      border-radius: 3px;
+      position: sticky;
+      top: 55px;
+      z-index: 2;
+      display: block;
+      box-shadow: 5px 5px 4px #162635, -5px -5px 4px #6b8196;
+    }
+
+    a {
+      color: #0099FF;
+    }
+
+    a.contenido {
+      color: black;
+    }
+
+    .indice .indice_titulo {
+      font-size: 20px;
+      color: black;
+      padding: 0 0 0 10px;
+    }
+
+    .indice .indice_lista {
+      padding: 0 0 0 30px;
+    }
+
+
+
+    /* Texto general */
+    .texto {
+      background: #131313;
+      margin: 20px 20px 20px 10px;
+      border-radius: 1rem;
+      padding: 0 20px 0 20px;
+      box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
+    }
+
+    .capa {
+      background: #131313;
+      height: 40px;
+      position: relative;
+      padding: 0;
+    }
+
+    p {
+      padding: 0 20px 0 10px;
+      text-align: justify;
+      text-indent: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 0 20px 0 10px;
+      font-size: 40px;
+    }
+
+    h3 {
+      padding: 0 20px 0 10px;
+      font-size: 30px;
+    }
+
+    h4 {
+      padding: 0 20px 0 10px;
+      font-size: 20px;
+    }
+
+
+
+    /* Tablas */
+    table {
+      color: white;
+    }
+
+
+
+    /* Listas o numeración */
+    .listas,
+    .numeracion {
+      padding: 0 20px 0 20px;
+      text-align: justify;
+    }
+
+    ul.listas,
+    ol {
+      font-family: Raleway;
+      padding: 0px 0px 0px 30px;
+    }
+
+    ol ol {
+      font-family: Raleway;
+      padding: 0px 0px 0px 30px;
+    }
+
+
+
+    /* Actividad diáctica */
+    button, input {
+      padding: 20px 0px 20px 0px;
+      text-decoration: none;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      color: white;
+      background-color: #066dcc;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    label {
+      color: black;
+      font-family: Raleway;
+    }
+
+    .preguntas {
+      background: white;
+      width: 80%;
+      height: auto;
+      border-radius: 4px;
+      text-align: center;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1; 
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    .modal-content{  
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)} 
+      to {-webkit-transform:scale(1)}
+    }
+
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
+
+    .close {
+      position: absolute;
+      top: 50px;
+      right: 40px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+
+
+
+    /* Pie de página */
+    #header_wrap2 {
+      justify-items: center;
+      align-items: flex-end;
+      margin: 0px;
+    }
