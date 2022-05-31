@@ -161,18 +161,17 @@
           </p>
           
           <div class="capa"><a name="indice2"></a></div>
-          <h2>¿Dónde se encuentra este asteroide?<br><br></h2>
-          <p>Ahora que ya conoce más acerca de como se agrupan los asteroides en base a sus órbitas, a continuación se
-            presentan algunas imágenes de las órbitas de algunos asteroides interesantes, elija la respuesta correcta
-            para
-            poder ver datos interesantes.<br><br>
+          <h2>¿Cuál es el tipo espectral de este asteroide?<br><br></h2>
+          <p>A continuación se presenta una actividad bastante ilustrativa e interactiva sobre la clasificación de los asteroides según su tipo
+            espectral o taxonomía. En la pantalla se mostrará una imagen del espectro de reflexión del asteroide y se hará una pregunta sobre su tipo
+            espectral. Eliga la respuesta apropiada.<br><br>
           </p>
           <center>
-            <div class="preguntas" background-image: url(«img/1_orbital-diagram.width-1320.jpg»)>
+            <div class="preguntas" background-image: url(«img»)>
             <div class="preguntas">
               <p><br><br></p>
               <button type="button" onclick="cambiar()">Intentar con otro asteroide</button>
-              <h3 style="color:black; padding:20px">¿A qué grupo pertenece el siguiente asteroide?</h3>
+              <h3 style="color:black; padding:20px">¿A qué tipo espectral pertenece el siguiente asteroide?</h3>
               <div id="respuestas"></div><br>
               <input type="button" value="Comprobar" onclick="comprobar()"><p><br><br></p>
                 <img id="ia" src="" width="500" height="400"><br><br>
@@ -185,12 +184,13 @@
           <script> 
             var respuesta_correcta;
             var dato_interesante;
-            var imagenes = ["img/Ceres.jpg", "img/2001 CP44.jpg", "img/1468 Zomba (1938 PA).jpg", "img/2020 UX3.jpg"];
-            var respuestas = [["MBA", "TNO", "Centauro", "Troyano", "NEA"], ["NEA", "TNO", "Centauro", "Troyano", "MBA"], ["MBA", "TNO", "Centauro", "Troyano", "NEA"], ["NEA", "TNO", "Centauro", "Troyano", "MBA"]];
-            var datos = ["Este asteroide es especial por haber sido el primero en ser descubierto.",
-              "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
-              "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
-              "Por tener un MOID=0.0318381 AU, este asteroide es un PHA, por lo que está en constante monitoreo por los científicos."]
+            var imagenes = ["img/Vesta.png", "img/Lutetia.png", "img/Aeternitas.png", "img/Pallas.png", "img/Dembowska.png"];
+            var respuestas = [["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"], ["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"], ["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"], ["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"],["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"]];
+            var datos = ["Es el segundo asteroide más grande del cinturón principal con 530 km de diametro.",
+              "Es el primer asteroide descubierto por un astrónomo aficionado en 1852.",
+              "Su nombre está dedicado a la personificación del concepto Eternidad.",
+              "Es el tecer asteroide más grande del cinturón principal con 512 km de diametro",
+              "Tiene uno de los albedos más grandes de entre los asteroides de gran tamaño".]
             function cambiar() {
               var al = Math.floor(Math.random() * imagenes.length);
               var respuestas_posibles = respuestas[al];
