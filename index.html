@@ -160,18 +160,18 @@
             de 0,45 a 2,45 μm que proporciona un sistema de clasificación de asteroides basado en proporciones mineralógicas.<br><br>
           </p>
           
-          <div class="capa"><a name="indice2"></a></div>
-          <h2>¿Cuál es el tipo espectral de este asteroide?<br><br></h2>
-          <p>A continuación se presenta una actividad bastante ilustrativa e interactiva sobre la clasificación de los asteroides según su tipo
-            espectral o taxonomía. En la pantalla se mostrará una imagen del espectro de reflexión del asteroide y se hará una pregunta sobre su tipo
-            espectral. Eliga la respuesta apropiada.<br><br>
+         <div class="capa"><a name="indice2"></a></div>
+          <h2>¿Dónde se encuentra este asteroide?<br><br></h2>
+          <p>Ahora que ya conoce más acerca de como se agrupan los asteroides en base a sus órbitas, a continuación se
+            presentan algunas imágenes de las órbitas de algunos asteroides interesantes, elija la respuesta correcta
+            para
+            poder ver datos interesantes.<br><br>
           </p>
           <center>
-            
             <div class="preguntas">
               <p><br><br></p>
               <button type="button" onclick="cambiar()">Intentar con otro asteroide</button>
-              <h3 style="color:black; padding:20px">¿A qué tipo espectral pertenece el siguiente asteroide?</h3>
+              <h3 style="color:black; padding:20px">¿A qué grupo pertenece el siguiente asteroide?</h3>
               <div id="respuestas"></div><br>
               <input type="button" value="Comprobar" onclick="comprobar()"><p><br><br></p>
                 <img id="ia" src="" width="500" height="400"><br><br>
@@ -181,16 +181,17 @@
               </div>
             </div>
           </center>
+
           <script> 
             var respuesta_correcta;
             var dato_interesante;
-            var imagenes = ["img/Vesta.jpg", "img/Lutetia.jpg", "img/Aeternitas.jpg", "img/Pallas.jpg"];
-            var respuestas = [["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"], ["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"], ["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"], ["Tipo Xc", "Tipo A", "Tipo B", "Tipo V", "Tipo R"]];
-            var datos = ["Es el segundo asteroide más grande del cinturón principal con 530 km de diametro.",
-              "Es el primer asteroide descubierto por un astrónomo aficionado en 1852.",
-              "Su nombre está dedicado a la personificación del concepto Eternidad.",
-              "Es el tecer asteroide más grande del cinturón principal con 512 km de diametro".]
-            
+            var imagenes = ["img/Ceres.jpg", "img/2001 CP44.jpg", "img/1468 Zomba (1938 PA).jpg", "img/2020 UX3.jpg"];
+            var respuestas = [["MBA", "TNO", "Centauro", "Troyano", "NEA"], ["NEA", "TNO", "Centauro", "Troyano", "MBA"], ["MBA", "TNO", "Centauro", "Troyano", "NEA"], ["NEA", "TNO", "Centauro", "Troyano", "MBA"]];
+            var datos = ["Este asteroide es especial por haber sido el primero en ser descubierto.",
+              "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
+              "A este tipo de asteroides se les llama Mars-crossing, pues en inglés se refiere a que cruza con la órbita de Marte.",
+              "Por tener un MOID=0.0318381 AU, este asteroide es un PHA, por lo que está en constante monitoreo por los científicos."]
+
             function cambiar() {
               var al = Math.floor(Math.random() * imagenes.length);
               var respuestas_posibles = respuestas[al];
@@ -207,13 +208,16 @@
                 respuestas_reordenadas[i] = respuestas_posibles[posiciones[posicion_al]];
                 posiciones.splice(posicion_al, 1);
               }
+
               document.getElementById("ia").src = imagenes[al];
+
               var txt_respuestas = "";
               for (i in respuestas_reordenadas) {
                 txt_respuestas += '<input type="radio" name="cuestionario" value="' + i + '"><label>' + respuestas_reordenadas[i] + '</label><br>';
               }
               document.getElementById("respuestas").innerHTML = txt_respuestas;
             }
+
             function comprobar() {
               var respuesta = $("input[type=radio]:checked").val()
               if (respuesta == respuesta_correcta) {
@@ -225,6 +229,7 @@
             
             
             var modal = document.getElementById("myModal");
+
             // Get the image and insert it inside the modal - use its "alt" text as a caption
             var img = document.getElementById("ia");
             var modalImg = document.getElementById("img");
@@ -232,13 +237,16 @@
               modal.style.display = "block";
               modalImg.src = this.src;
            }
+
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
+
           // When the user clicks on <span> (x), close the modal
           span.onclick = function() { 
               modal.style.display = "none";
           }
           </script>
+
           <p>
             <br><br>
             Ahora que ya ha practicado y conoce algunos NEAs, intente clasificarlos por la familia en la cual
@@ -305,10 +313,16 @@
                 </tbody>
               </table><br><br>
             </center>
+            
+            Si desea saber de donde se obtuvieron las imágenes, puede buscar algunos de los asteroides vistos en esta actividad en la base de datos de <a 
+            href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/">base de datos de cuerpos menores del JPL de la NASA</a>, donde podrá encontrar incluso 
+            simuladores de las órbitas y explorar más a fondo los movimientos de estos objetos.<br><br>
+          </p>
         </font>
       </div>
     </div>
   </div>
+
 
   <center>
     <div id="header_wrap2" class="outer">
