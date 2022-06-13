@@ -2,56 +2,68 @@
 
 <head>
   <title>Actividad: Taxonomía</title>
-  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <link rel="stylesheet" href="diseño.css">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js"  ></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="css/diseño.css">
 </head>
 
-<body onload="cambiar()">
+<body>
+  
   <header>
-    <h3 class="titulo">
-      Asteroides Cercanos a la Tierra (NEAs)
-    </h3>
-    <img src="img/LOGO INAOE 2012 blanco PNG.png" alt="INAOE" class="logoimg">
+    <div class="parte_superior">
+        <div class="titulo">Asteroides Cercanos a la Tierra (NEAs)
+        </div>
+        <img src="img/LOGO INAOE 2012 blanco PNG.png" alt="INAOE" class="logoimg">
+    </div>
   </header>
 
-
-  <div class="container1">
-    <div id="header">
-      <ul class="nav">
-        <li><a href="https://asteroidesinaoe.github.io/">INICIO</a></li>
-        <li><a href="https://asteroidesinaoe.github.io/Asteroides/">ASTEROIDES</a></li>
-        <li><a href="https://asteroidesinaoe.github.io/Fotometr-a/">FOTOMETRÍA</a>
-          <ul>
-            <li><a href="https://asteroidesinaoe.github.io/MPO-Canopus/">MPO CANOPUS</a></li>
-            <li><a href="https://asteroidesinaoe.github.io/Fourier/">ANÁLISIS DE FOURIER</a></li>
-          </ul>
-        </li>
-        <li><a href="https://asteroidesinaoe.github.io/Espectroscop-a/">ESPECTROSCOPÍA</a></li>
-        <li><a href="https://asteroidesinaoe.github.io/Aprender-mas/">APRENDER MÁS</a>
-          <ul>
-            <li><a href="https://asteroidesinaoe.github.io/Rayos-cosmicos/">RAYOS CÓSMICOS</a></li>
-            <li><a href="https://asteroidesinaoe.github.io/CCD/">CCD</a></li>
-          </ul>
-        </li>
-        <li><a href="https://asteroidesinaoe.github.io/Infograf-as/">INFOGRAFÍAS</a>
-          <ul>
-            <li><a href="https://asteroidesinaoe.github.io/Asteroides-M-xico/">IMPACTOS EN MÉXICO</a></li>
-            <li><a href="https://asteroidesinaoe.github.io/Asteroides-Mundo/">IMPACTOS EN EL MUNDO</a></li>
-            <li><a href="https://asteroidesinaoe.github.io/Acercamientos/">ACERCAMIENTOS</a></li>
-            <li><a href="https://asteroidesinaoe.github.io/Biograf-as/">BIOGRAFÍAS</a></li>
-          </ul>
-        </li>
-        <li><a href="https://asteroidesinaoe.github.io/Actividades/">ACTIVIDADES</a>
-          <ul>
-            <li><a href="https://asteroidesinaoe.github.io/Actividad-Curva-de-Luz/">CURVAS DE LUZ</a></li>
-            <li><a href="https://asteroidesinaoe.github.io/Actividad-rbitas-de-Asteroides/">ÓRBITAS</a></li>
-            <li><a href="https://asteroidesinaoe.github.io/Taxonom-a/">TAXONOMÍA</a></li>
-          </ul>
-        </li>
-        <li><a href="https://asteroidesinaoe.github.io/Glosario/">GLOSARIO</a></li>
-        <li><a href="https://asteroidesinaoe.github.io/Contacto/">CONTACTO</a></li>
-      </ul>
+  <div class="container__menu">
+    <div class="menu">
+        <input type="checkbox" id="check__menu">
+        <label for="check__menu" id="label__check">
+            <i class="fas fa-bars icon__menu"></i>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="https://asteroidesinaoe.github.io" id="selected"></a></li>
+                <li><a href="https://asteroidesinaoe.github.io/Asteroides/">Asteroides</a></li>
+                <li><a href="https://asteroidesinaoe.github.io/Fotometr-a/">Fotometría</a>
+                  <ul>
+                    <li><a href="https://asteroidesinaoe.github.io/MPO-Canopus/">MPO Canopus</a></li>
+                    <li><a href="https://asteroidesinaoe.github.io/Fourier/">Análisis de Fourier</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://asteroidesinaoe.github.io/Espectroscop-a/">Espectroscopía</a></li>
+                <li><a href="https://asteroidesinaoe.github.io/Infograf-as/">Infografías</a>
+                  <ul>
+                    <li><a href="https://asteroidesinaoe.github.io/Asteroides-M-xico/">Impactos en méxico</a></li>
+                    <li><a href="https://asteroidesinaoe.github.io/Asteroides-Mundo/">Impactos en el mundo</a></li>
+                    <li><a href="https://asteroidesinaoe.github.io/Acercamientos/">Acercamientos</a></li>
+                    <li><a href="https://asteroidesinaoe.github.io/Biograf-as/">Biografías</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://asteroidesinaoe.github.io/Actividades/">Actividades</a>
+                  <ul>
+                    <li><a href="https://asteroidesinaoe.github.io/Actividad-Curva-de-Luz/">Curvaz de luz</a></li>
+                    <li><a href="https://asteroidesinaoe.github.io/Actividad-rbitas-de-Asteroides/">Órbitas</a></li>
+                    <li><a href="https://asteroidesinaoe.github.io/Taxonom-a/">Taxonomía</a></li>
+                    <li><a href="https://asteroidesinaoe.github.io/Nombres-asteroides/">Nombres</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://asteroidesinaoe.github.io/Glosario/">Glosario</a></li>
+                <li><a href="https://asteroidesinaoe.github.io/Aprender-mas/">Aprender más</a>
+                  <ul>
+                    <li><a href="https://asteroidesinaoe.github.io/Rayos-cosmicos/">Rayos cósmicos</a></li>
+                    <li><a href="https://asteroidesinaoe.github.io/CCD/">CCD</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://asteroidesinaoe.github.io/Contacto/">Contacto</a></li>
+            </ul>
+        </nav>
     </div>
   </div>
   
