@@ -409,7 +409,7 @@ label {
       display: flex;
     }
     #check__menu:checked ~ nav > ul{
-      height: 345px;
+      height: auto;
       visibility: visible;
       opacity: 1;
     } 
